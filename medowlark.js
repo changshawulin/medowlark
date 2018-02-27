@@ -17,9 +17,7 @@ app.set("port", process.env.PORT || 8090);
 app.get("/", (req, res) => res.render("home"));
 
 
-app.get("/about", (req, res) => {
-    res.render("about", {fortune: fortune.getFortune()});
-});
+app.get("/about", (req, res) => res.render("about", {fortune: fortune.getFortune()}));
 
 app.use(express.static(__dirname + "/public"));
 
