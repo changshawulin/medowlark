@@ -83,6 +83,8 @@ app.get("/about", (req, res) => {
 app.get("/newsletter", (req, res) => res.render("newsletter", {csrf: "CSRF token gose here"}));
 
 app.post("/process", (req, res) => {
+    console.log(req.body.name);
+    console.log(req.body.email);
     if(req.xhr || req.accepts('json,html')==='json'){
         // if there were an error, we would send { error: 'error description' }
         res.send({ success: true });

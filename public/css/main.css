@@ -1,43 +1,12 @@
 
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
 
-.menu {
-    font:12px Verdana;
+element.style {
 }
-
-.menu, .menu li {
-    list-style:none;
-    padding:0;
-    margin:0;
+.aliyun-header {
+    min-width: 992px;
 }
-
-.menu li {
-    float: left;
+.aliyun-header {
+    background: #31373B;
+    min-width: 1200px;
 }
-
-.menu li a{
-    display: block;
-    padding:8px 50px;
-    background: grey;
-    color: #000;
-    text-decoration: none;
-    border-right:1px solid #000000;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

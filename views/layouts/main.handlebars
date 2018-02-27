@@ -14,15 +14,22 @@
     <script src="//code.jquery.com/jquery-2.0.2.min.js"></script>
 </head>
 <body>
-    <header><img src="/images/logo.png" alt="Meadowlark Travel logo"></header>
-    <ul class="menu col-md-12">
-        <li><a href="home">首页</a></li>
-        <li><a href="about">关于</a></li>
-        <li><a href="newsletter">登录</a></li>
-        <li><a href="weather">天气</a></li>
+    <div class="aliyun-header">
+        <img src="/images/logo.png" alt="Meadowlark Travel logo">
+        <div class="pull-right">
+            <li ><a href="newsletter">登录</a></li>
+        </div>
+    </div>
+    <div class="col-md-4"></div>
+    <ul class="nav nav-pills col-md-4 myTab">
+        <li role="presentation"><a href="home">Home</a></li>
+        <li role="presentation"><a href="about">关于</a></li>
+        <li role="presentation"><a href="newsletter">登录</a></li>
+        <li role="presentation"><a href="weather">天气</a></li>
     </ul>
-
-    {{{body}}}
+    <div class="col-md-12">
+        {{{body}}}
+    </div>
 
     <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
     <script>window.jQuery || document.write('<script src="/vendor/js/jquery-2.1.1.min.js"><\/script>')</script>
@@ -30,5 +37,12 @@
 
 
     <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <script>
+        $('.myTabs a').click(function (e) {
+//            e.preventDefault()
+            $(this).tab('show')
+        })
+    </script>
 </body>
 </html>
