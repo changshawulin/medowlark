@@ -3,7 +3,9 @@
  */
 
 var express = require('express');
+var cookieParse = require("cookie-parse");
 var fortune = require("./lib/fortune");
+var credentials = require("./credentials");
 
 var app = express();
 
@@ -23,6 +25,7 @@ app.set("view engine", "handlebars");
 
 app.set("port", process.env.PORT || 8090);
 
+app.use(cookieParse(credentials.cookieSecret));
 app.use(express.static(__dirname + "/public"));
 
 app.use((req, res, next) => {
